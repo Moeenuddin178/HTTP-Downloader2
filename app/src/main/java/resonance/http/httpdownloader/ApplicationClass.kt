@@ -32,6 +32,7 @@ class ApplicationClass : Application() {
 
     val ioScope = CoroutineScope(Dispatchers.IO)
     override fun onCreate() {
+        //log
         super.onCreate()
         pref = PreferenceManager.getDefaultSharedPreferences(this)
         logDB = Room.databaseBuilder(this, LogDB::class.java, "logs").build().conn()
